@@ -1,8 +1,8 @@
-Web Visualizers
-===============
+OptBot UI
+=========
 Description
 --
-Web-based visualizations for analysing equities and derivatives.
+Web-based UI for the optbot service.
 
 Build
 --
@@ -10,6 +10,7 @@ Build
     as described [here](https://docs.npmjs.com/getting-started/installing-node). 
 2.  Build the app:
 
+        $ cd <project root>
         $ npm install
 
 3.  Verify that dependencies have been built to `<project root>/node_modules/`
