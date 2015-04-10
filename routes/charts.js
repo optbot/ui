@@ -1,7 +1,6 @@
-﻿var express = require('express');
+﻿var config = require('../config/config.js');
+var express = require('express');
 var router = express.Router();
-
-var MongoClient = require('mongodb').MongoClient;
 
 // middleware specific to this router
 router.use(function timeLog(req, res, next) {
@@ -10,36 +9,11 @@ router.use(function timeLog(req, res, next) {
 });
 
 router.get('/', function (req, res) {
-    res.render('charts/index');
-});
+    var model = {
+        restUrl: config.web.rest_url
+    };
 
-router.get('/data', function (req, res, next) {
-    //if (req.xhr) {
-    //    var url = 'mongodb://localhost:27017/quotes';
-    //    MongoClient.connect(url, function (err, db) {
-    //        var quotes = db.collection('quotes');
-            
-    //        var threeMonthsAgo = new Date();
-    //        threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
-
-    //        var query = {
-    //            Underlying: { $eq: 'SCTY' },
-    //            Quote_Time: { $gte: threeMonthsAgo }
-    //        };
-            
-    //        var project = {
-    //            Quote_Time: 1,
-    //            Strike: 1
-    //        };
-
-    //        quotes.find(query, project).toArray(function (err, docs) {
-    //            db.close();
-    //            res.json(docs);
-    //        });
-    //    });
-    //} else {
-        next();
-    //}
+    res.render('charts/index', model);
 });
 
 module.exports = router;

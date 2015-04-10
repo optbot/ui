@@ -1,11 +1,19 @@
-﻿Chart
-
-<div id="chart"></div>
+﻿<div id="chart">Loading your chart...</div>
 
 <script type="text/javascript">
 	$(function () {
+		var parms = {
+			equity: 'SCTY',
+			strike: 30,
+			option: 'call',
+			expiry: '2015-4-9'
+		};
+
+		var qs = $.param(parms);
+
 		$.ajax({
-			url: "charts/data",
+			url: "{{restUrl}}?" + qs,
+			dataType: 'jsonp',
 			success: function (d) {
 				if (d) {
 					var data = new Array(d.length);
@@ -16,17 +24,17 @@
 						var quoteTimeMillis = Date.parse(doc.Quote_Time);
 						var quoteTime = new Date();
 						quoteTime.setTime(quoteTimeMillis);
-						var strike = doc.Strike;
+						var last = doc.Last;
 
 						//data[i] = [priceDt, [price, 1], [trade, 0]]; // When "errorBars: true"
-						data[i] = [quoteTime, strike];
+						data[i] = [quoteTime, last];
 					}
 
 					var graph = new Dygraph(
 						document.getElementById("chart"),
 						data,
 						{
-							labels: ["Quote Time", "Strike"],
+							labels: ["Quote Time", "Last"],
 							labelsDivStyles: { "textAlign": "right" }
 							//customBars: true
 						}
