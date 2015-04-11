@@ -1,19 +1,23 @@
 {
-    "name": "optbotui",
-    "version": "0.0.1",
-    "description": "Web-based UI for the optbot service.",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Mark Scappini, Marshall Farrier, Robert Rodriguez",
-    "license": "ISC",
-    "dependencies": {
-        "express": "4.x.x",
-        "express-handlebars": "2.x.x"
-    },
-    "devDependencies": {
-        "grunt": "0.4.5",
-        "shelljs": "0.4.0"
-    }
+  "name": "optbotui",
+  "version": "0.0.1",
+  "description": "Web-based UI for the optbot service.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/optbot/ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Mark Scappini, Marshall Farrier, Robert Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.12.3",
+    "express-handlebars": "2.0.0",
+    "yargs": "3.7.1"
+  },
+  "devDependencies": {
+  }
 }
