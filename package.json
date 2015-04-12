@@ -1,5 +1,5 @@
 {
-  "name": "optbotui",
+  "name": "@optbot/ui",
   "version": "0.0.1",
   "description": "Web-based UI for the optbot service.",
   "main": "app.js",
