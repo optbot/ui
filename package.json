@@ -22,9 +22,10 @@
         "views"
     ],
     "dependencies": {
-        "express": "4.12.3",
-        "express-handlebars": "2.0.0",
-        "yargs": "3.7.1"
+        "express": "~4.12.3",
+        "express-handlebars": "~2.0.0",
+        "nconf": "~0.7.1",
+        "yargs": "~3.7.1"
     },
     "devDependencies": {
         "chai": "~2.2.0",
