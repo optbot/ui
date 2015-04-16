@@ -23,6 +23,11 @@ Usage
 
 2. If the service is running on port `8080` on a host with IP address `91.198.174.192`, navigate to `http://91.198.174.192:8080/` in a web browser.
 
+###Default values
+
+- Host: Any
+- Port: 8080
+
 ###Examples
 
 **Start production** (binds to any address, port 8080)
@@ -36,6 +41,10 @@ Usage
 **Start production on a different port** (binds to any address)
 
 	$ npm start -- --port=12345
+
+**Start production on a different host and port**
+
+	$ npm start -- --host=127.0.0.1 --port=12345
 
 Connects To
 --
