@@ -9,8 +9,7 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node lib/app.js",
-        "startdev": "node lib/app.js --env=development"
+        "start": "node lib/app.js"
     },
     "private": true,
     "author": "Mark Scappini, Marshall Farrier, Robert Rodriguez",
