@@ -15,13 +15,10 @@ Usage
 
 	$ npm start
 
-###Details
+OR you can start the Node server with options (notice the first `--` for optional args):
 
-1. You can start the Node server with options (notice the first `--` for optional args):
+    $ npm start [-- [--port=your_port] [--host=your_host]]
 
-        $ npm start [-- [--port=your_port] [--host=your_host]]
-
-2. If the service is running on port `8080` on a host with IP address `91.198.174.192`, navigate to `http://91.198.174.192:8080/` in a web browser.
 
 ###Default values
 
@@ -45,6 +42,12 @@ Usage
 **Start production on a different host and port**
 
 	$ npm start -- --host=127.0.0.1 --port=12345
+
+Testing
+--
+
+If the service is running on port `8080` on a host with IP address `91.198.174.192`, navigate to `http://91.198.174.192:8080/` in a web browser.
+
 
 Connects To
 --
