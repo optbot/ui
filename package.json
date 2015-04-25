@@ -1,15 +1,42 @@
 {
-  "name": "investorbot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@optbot/ui",
+  "version": "0.0.1",
+  "description": "Web-based UI for the optbot service.",
+  "main": "lib/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/optbot/ui.git"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/app.js"
+  },
+  "private": true,
+  "author": "Marshall Farrier, Mark Scappini",
+  "license": "MIT",
+  "files": [
+    "AUTHORS",
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "public/",
+    "views/"
+  ],
+  "config": {
+    "host": "",
+    "port": "8080",
+    "resturl": "http://localhost:8081/api/"
+  },
   "dependencies": {
-    "express": "4.x.x",
-    "express-handlebars": "2.x.x"
+    "express": "~4.12.3",
+    "express-handlebars": "~2.0.1",
+    "nconf": "~0.7.1",
+    "yargs": "~3.7.1"
+  },
+  "devDependencies": {
+    "chai": "~2.2.0",
+    "jscs": "~1.12.0",
+    "jshint": "~2.7.0",
+    "mocha": "~2.2.4"
   }
 }
