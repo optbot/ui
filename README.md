@@ -35,7 +35,7 @@ Testing
 If the service is running on port `8080` on a host with IP address `91.198.174.192`, navigate to `http://91.198.174.192:8080/` in a web browser.
 
 ### Code conformity
-    $ jshint lib test
+    $ jshint lib
     $ jscs .
 
 Connects To
