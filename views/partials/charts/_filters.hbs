@@ -1,5 +1,31 @@
 <form id="filter" action="/" method="get">
-	<input id="equity" name="equity" type="text" value="{{equity}}" />
-	{{#if equity}}
+	<span>Equity:</span>
+	<input id="equity" name="equity" type="text" value="{{filter.equity}}" />
+	
+	<span>Option:</span>
+	{{#select 'option' filter.option}}
+		<option value="">[Select Option]</option>
+		<option value="call" {{selected}}>Call</option>
+		<option value="put">Put</option>
+	{{/select}}
+
+	{{#if filter.equity}}
+	{{#if filter.option}}
+		{{#select 'strike' filter.strike}}
+			<option value="">[Select Strike]</option>
+			{{#each strikes}}
+			<option value="{{this}}">{{this}}</option>
+			{{/each}}
+		{{/select}}
+
+	{{#if filter.strike}}
+		{{#select 'expiry' filter.expiry}}
+			<option value="">[Select Expiry]</option>
+			{{#each expiries}}
+			<option value="{{this}}">{{this}}</option>
+			{{/each}}
+		{{/select}}
+	{{/if}}
+	{{/if}}
 	{{/if}}
 </form>
