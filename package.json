@@ -1,6 +1,6 @@
 {
   "name": "@optbot/ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Web-based UI for the optbot service.",
   "main": "lib/app.js",
   "repository": {
@@ -28,9 +28,12 @@
     "resturl": "http://localhost:8081/api/"
   },
   "dependencies": {
+    "async": "~0.9.0",
     "express": "~4.12.3",
     "express-handlebars": "~2.0.1",
+    "moment": "~2.10.2",
     "nconf": "~0.7.1",
+    "rest": "~1.3.1",
     "yargs": "~3.7.1"
   },
   "devDependencies": {
