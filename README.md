@@ -29,10 +29,6 @@ To change the bound host
 
 	$ sudo npm config set @optbot/ui:host 127.0.0.1 --global
 
-###Dependencies
-
-`npm start` and `npm run stop` depend on the [forever](https://www.npmjs.com/package/forever) package.
-
 Testing
 --
 
