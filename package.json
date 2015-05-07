@@ -2,14 +2,14 @@
   "name": "@optbot/ui",
   "version": "0.0.2",
   "description": "Web-based UI for the optbot service.",
-  "main": "lib/app.js",
+  "main": "lib/ui.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/optbot/ui.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node lib/app.js"
+    "start": "node lib/ui.js"
   },
   "private": true,
   "author": "Marshall Farrier, Mark Scappini",
