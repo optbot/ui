@@ -29,6 +29,7 @@
     "resturl": "http://localhost:8081/api/"
   },
   "dependencies": {
+    "@optbot/shutdown-express": "git://github.com/optbot/shutdown-express.git",
     "async": "~0.9.0",
     "bunyan": "~1.3.5",
     "express": "~4.12.3",
