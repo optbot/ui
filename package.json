@@ -23,7 +23,7 @@
     "views/"
   ],
   "config": {
-    "logfile": "/var/log/optbot/ui/service.log",
+    "logfile": "./service.log",
     "host": "",
     "port": "8080",
     "resturl": "http://localhost:8081/api/"
